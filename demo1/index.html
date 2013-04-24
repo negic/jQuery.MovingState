@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>demo1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrapper {
+            height: 3000px;
+        }
+        #state {
+            border: 1px solid #999;
+            width: 300px;
+            height: 200px;
+
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin-top: -150px;
+            margin-left: -150px;
+
+            color: #fff;
+            font-size: 40px;
+            background-color: #000;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div id="wrapper">
+    <div id="state"><span style="font-size: 20px;">Let's Scroll or Resize!!</span></div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="../jquery.movingstate.min.js"></script>
+<script>
+
+    var $state = $('#state');
+
+    $(window).movingstate({
+        start: function() {
+            $state.text('start').css('background-color', '#33f');
+            console.log('start');
+        },
+        move: function() {
+            $state.text('move').css('background-color', '#f33');
+            console.log('move');
+        },
+        end  : function() {
+            $state.text('end').css('background-color', '#3f3');
+            console.log('end');
+        },
+        event: 'scroll resize',
+        delay: 50
+    });
+
+</script>
+</body>
+</html>
