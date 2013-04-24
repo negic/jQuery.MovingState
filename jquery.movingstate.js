@@ -1,8 +1,10 @@
-/*! jQuery.MovingState
-    v0.1.0
-    @negic
-    MIT License
-*/
+/*!
+ * jQuery.MovingState (https://github.com/negic/jQuery.MovingState)
+ * lastupdate: 2013-04-25
+ * version: 0.1.0
+ * author: '@negic' Yoshiki Negishi <ng4y4k@gmail.com>
+ * License: MIT
+ */
 (function($, o) {
     o = {};
     $.fn.movingstate = function(options) {
